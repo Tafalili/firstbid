@@ -1,0 +1,22 @@
+{"@@locale": "ar","appTitle": "سوق المزادات","home": "الرئيسية",
+  "favorites": "المفضلات","myBids": "مزايداتي","myPurchases": "مشترياتي",
+  "notifications": "الإشعارات","loginScreenTitle": "تسجيل الدخول",
+  "signupScreenTitle": "إنشاء حساب","phoneNumber": "رقم الهاتف",
+  "password": "كلمة المرور","loginButton": "تسجيل الدخول",
+  "forgotPassword": "هل نسيت كلمة المرور؟","createAccount": "إنشاء حساب جديد",
+  "name": "الاسم الثلاثي","confirmPassword": "تأكيد كلمة المرور",
+  "createAccountButton": "إنشاء حساب","search": "بحث",
+  "userInformation": "معلومات المستخدم",
+  "completedOrders": "الطلبات المكتملة",
+  "contactUs": "تحدث معنا","aboutUs": "عنا",
+  "shareApp": "شارك التطبيق","darkMode": "الوضع الداكن",
+  "languages": "اللغات","featuredProducts": "منتجات مميزة",
+  "latestAuctions": "أحدث المزادات","showAll": "إظهار الكل","categoryes": "التصنيفات",  "image_cor_wrong": "خطأ في تحميل الصور"
+,  "try_again": "إعادة المحاولة",  "no_image": "لا توجد صور متاحة","categoriesTitle": "التصنيفات",
+  "currentPrice": "السعر الحالي",
+  "timeRemaining": "الوقت المتبقي",
+  "auctionEnded": "انتهى المزاد",
+  "noName": "لا يوجد اسم"
+
+
+}
