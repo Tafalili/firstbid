@@ -2,6 +2,7 @@ import 'package:bidmarket/presentation/cubit/auth/auth_cubit.dart';
 import 'package:bidmarket/presentation/cubit/language_cubit/language_cubit.dart';
 import 'package:bidmarket/presentation/cubit/themedata/theme_cubit.dart';
 import 'package:bidmarket/presentation/screens/auth/login_screen.dart';
+import 'package:bidmarket/presentation/screens/home/HomeScreen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -69,7 +70,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           themeMode: themeMode,
-          home: const LoginScreen(),
+          home: const HomeScreen(),
         );
       },
     );
