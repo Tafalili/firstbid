@@ -117,4 +117,4 @@ class CategoryCubit extends Cubit<CategoryState> {
       emit(CategoryError('حدث خطأ غير متوقع: ${e.toString()}'));
     }
   }
-}
+} 5
