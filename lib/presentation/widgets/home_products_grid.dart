@@ -6,6 +6,7 @@ import 'package:easy_localization/easy_localization.dart';
 import '../screens/home/product_cubit/product_cubit.dart';
 import '../screens/home/product_cubit/product_state.dart';
 import '../screens/home/product_cubit/products.dart';
+import '../screens/home/product_detiles/product_detiles_screen.dart';
 import 'all_products_screen.dart';
 
 // Your Products Grid View
@@ -18,8 +19,9 @@ class HomeProductsGrid extends StatefulWidget {
 
 class _HomeProductsGridState extends State<HomeProductsGrid> {
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // استدعاء جلب البيانات هنا يحل مشكلة الـ context
     context.read<ProductCubit>().fetchProducts();
   }
 
@@ -76,7 +78,18 @@ class _HomeProductsGridState extends State<HomeProductsGrid> {
                       scrollDirection: Axis.horizontal,
                       itemCount: featuredProducts.length,
                       itemBuilder: (context, index) {
-                        return AuctionProductCard(product: featuredProducts[index]);
+                        final product = featuredProducts[index];
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProductDetailsScreen(product: product),
+                              ),
+                            );
+                          },
+                          child: AuctionProductCard(product: product),
+                        );
                       },
                     ),
                   ),
@@ -97,7 +110,18 @@ class _HomeProductsGridState extends State<HomeProductsGrid> {
                   ),
                   itemCount: nonFeaturedProducts.length > 4 ? 4 : nonFeaturedProducts.length,
                   itemBuilder: (context, index) {
-                    return AuctionProductCard(product: nonFeaturedProducts[index]);
+                    final product = nonFeaturedProducts[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductDetailsScreen(product: product),
+                          ),
+                        );
+                      },
+                      child: AuctionProductCard(product: product),
+                    );
                   },
                 ),
                 const SizedBox(height: 20),
